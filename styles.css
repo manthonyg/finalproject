@@ -1,0 +1,934 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/** END RESET **/
+
+/** ICONS **/
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+}
+/** END ICONS **/
+
+/** GLOBAL STYLES **/
+
+:root {
+  --darkBlue: #1f4373;
+  --green: #96a61f;
+  --orange: #bf9004;
+  --brown: #73532d;
+  --red: #a64037;
+  --white: #ffffff;
+  --black: #000000;
+  font-family: "Public Sans", sans-serif;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 1em;
+}
+
+p h2 h3 h4 h5 {
+  font-weight: 200;
+}
+
+h1 {
+  font-size: 1em;
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+h4 {
+  font-size: 1.75em;
+}
+
+header {
+  background-image: linear-gradient(var(--teal), var(--white));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  background-color: var(--white);
+}
+
+nav {
+  margin: 10px;
+}
+
+header h1 {
+  padding: 20px;
+}
+
+header img {
+  padding: 10px;
+}
+
+header p {
+  padding: 10px;
+}
+
+body {
+  background-color: var(--darkBlue);
+}
+
+a,
+a:hover,
+a:visited,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+/** SCREEN READER/HIDDEN VALUES **/
+#skip,
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/** MENU **/
+
+#menu-toggle input {
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+#menu-toggle label {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--brown);
+}
+
+#menu {
+  display: none;
+}
+
+#menu .active {
+  border-bottom: 3px solid var(--green);
+}
+
+#cart-icon {
+  cursor: pointer;
+}
+
+.hamburger {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+/** END MENU **/
+
+/** WEEKLY **/
+
+#weekly {
+  display: flex;
+  height: 700px;
+  background-image: url("./assets/grocery-shopping.jpeg");
+  background-size: contain;
+  background-color: #bbbbbb;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+#weekly > article {
+  display: flex;
+  row-gap: 20px;
+  height: 300px;
+  max-width: 400px;
+  margin: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: #ffffff90;
+}
+
+#weekly h1 {
+  margin: 10px;
+}
+#weekly p {
+  margin: 10px;
+}
+
+#weekly button {
+  background-color: var(--red);
+  border: none;
+  margin: 10px;
+  padding: 12px;
+  width: 300px;
+  font-weight: 400;
+  color: var(--white);
+}
+/** END WEEKLY **/
+
+/** Category **/
+
+#category {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+#category div {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  background-color: var(--yellow);
+  padding: 20px;
+}
+
+#category h2 {
+  text-align: center;
+  width: 100%;
+}
+
+#category article img {
+  width: 100px;
+  height: 100px;
+  border: 2px solid var(--darkBlue);
+  border-radius: 100%;
+}
+
+#category section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  background-color: var(--teal);
+  grid-row-start: 1;
+  grid-column-start: 1;
+  width: 100%;
+  gap: 10px;
+  border: 2px solid var(--white);
+}
+
+#category section h4 {
+  width: 100%;
+}
+
+#category .button-container {
+  display: flex;
+  justify-content: center;
+}
+
+#category .view-all {
+  width: 300px;
+  background-color: var(--red);
+  padding: 12px;
+  color: var(--white);
+  border: none;
+}
+
+/** END Category **/
+
+/** Coupons **/
+
+#coupons {
+  background-color: var(--white);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#coupons h3 {
+  width: 100%;
+  text-align: center;
+  margin: 20px;
+}
+
+#coupons > p {
+  margin: 20px;
+  max-width: 400px;
+  line-height: 2;
+}
+
+#coupons div {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+#coupons article {
+  height: 375px;
+}
+
+#coupons .coupon-container {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  border: 2px dashed black;
+}
+
+#coupons article .coupon-container span {
+  position: absolute;
+  color: var(--green);
+  top: 10px;
+  left: 10px;
+}
+
+#coupons .coupon-data {
+  position: absolute;
+  width: 300px;
+}
+
+#coupons .coupon-data .product {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+#coupons .coupon-data .expiration {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+#coupons .coupon-data .description {
+  position: absolute;
+  top: 50px;
+  left: 10px;
+}
+
+#coupons .coupon-data .clip {
+  position: absolute;
+  top: 80px;
+  border-radius: 20px;
+  border: 2px solid var(--black);
+  background-color: var(--white);
+}
+
+#coupons .coupon-data button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100px;
+  position: absolute;
+  top: 140px;
+}
+
+#coupons .view-all {
+  width: 300px;
+  background-color: var(--red);
+  padding: 12px;
+  color: var(--white);
+  border: none;
+}
+/** END coupons **/
+
+/** ABOUT **/
+
+#about {
+  background-color: var(--blue);
+}
+
+#about div {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 20px;
+}
+
+#about section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  width: 90%;
+  gap: 10px;
+}
+
+#about section h4 {
+  width: 100%;
+}
+
+#about section p {
+  width: 100%;
+}
+
+/** END ABOUT **/
+
+/** Coupon-club **/
+
+#coupon-club form {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+#coupon-club div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#coupon-club input {
+  border: 2px solid var(--black);
+  width: 100%;
+  margin: 20px;
+  padding: 10px;
+  max-width: 200px;
+}
+
+#coupon-club input[type="submit"] {
+  background-color: var(--purple);
+  color: var(--white);
+}
+
+#coupon-club input[type="select"] {
+  width: 50px;
+}
+
+#coupon-club section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  width: 90%;
+  gap: 10px;
+}
+
+#coupon-club section h4 {
+  width: 100%;
+}
+
+#coupon-club section p {
+  width: 100%;
+}
+/** END coupon-club **/
+
+/** FOOTER **/
+footer {
+  width: 100%;
+  text-align: center;
+  background-color: var(--brown);
+  color: var(--white);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 200px;
+}
+
+footer p {
+  width: 100%;
+  flex-grow: 1;
+}
+
+footer a {
+  width: 100%;
+}
+
+/** END FOOTER **/
+
+/** MEDIA QUERIES **/
+@media only screen and (min-width: 768px) {
+  #menu-toggle label {
+    display: none;
+  }
+
+  #menu {
+    display: inline-flex;
+    color: var(--black);
+  }
+
+  #menu li {
+    padding: 15px;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  #menu li:hover {
+  }
+
+  #menu li:active {
+    border-bottom: 3px solid var(--black);
+  }
+
+  #menu a {
+    text-decoration: none;
+  }
+
+  #category {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+  #category div {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+    background-color: var(--yellow);
+    padding: 20px;
+  }
+
+  #category article img {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    border-radius: 100%;
+  }
+
+  #category section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    background-color: var(--teal);
+    grid-row-start: 1;
+    grid-column-start: 1;
+    width: 100%;
+    gap: 10px;
+    border: 2px solid var(--white);
+  }
+
+  #category section h4 {
+    width: 100%;
+  }
+
+  #category section img {
+    width: 100%;
+  }
+
+  #coupons {
+    background-color: var(--white);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #coupons h3 {
+    width: 100%;
+    text-align: center;
+    margin: 20px;
+  }
+
+  #coupons > p {
+    margin: 20px;
+    max-width: 400px;
+    line-height: 2;
+  }
+
+  #coupons > div {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  #coupons article {
+    height: 375px;
+  }
+
+  #coupons .coupon-container {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    border: 2px dashed black;
+  }
+
+  #coupons article .coupon-container span {
+    position: absolute;
+    color: var(--green);
+    top: 10px;
+    left: 10px;
+  }
+
+  #coupons .coupon-data {
+    position: absolute;
+    width: 300px;
+  }
+
+  #coupons .coupon-data .product {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+
+  #coupons .coupon-data .expiration {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  #coupons .coupon-data .description {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+  }
+
+  #coupons .coupon-data .clip {
+    position: absolute;
+    top: 80px;
+    border-radius: 20px;
+    border: 2px solid var(--black);
+    background-color: var(--white);
+  }
+
+  #coupons .coupon-data button {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100px;
+    position: absolute;
+    top: 140px;
+  }
+
+  #coupons #view-all {
+    width: 300px;
+    background-color: var(--red);
+    padding: 12px;
+    color: var(--white);
+    border: none;
+  }
+
+  #about div {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 20px;
+  }
+
+  #about section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    width: 90%;
+    gap: 10px;
+  }
+
+  #about section h4 {
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  #about section p {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  #menu-toggle label {
+    display: none;
+  }
+
+  #menu {
+    display: inline-flex;
+    color: var(--black);
+  }
+
+  #cart-icon {
+    order: 3;
+  }
+
+  #weekly {
+    display: flex;
+    background-color: #aaaaaa;
+  }
+
+  #weekly h2 {
+  }
+
+  #weekly p {
+  }
+
+  #img-grid {
+    grid-column: 2 / 3;
+    grid-row: 1;
+  }
+
+  #category {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #category div {
+    display: grid;
+    gap: 100px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    background-color: var(--yellow);
+    padding: 20px;
+  }
+
+  #category section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    background-color: var(--teal);
+    grid-row-start: 1;
+    grid-column-start: 1;
+    width: 100%;
+    gap: 10px;
+    border: 2px solid var(--white);
+  }
+
+  #category section h4 {
+    width: 100%;
+  }
+
+  #category section img {
+    width: 100%;
+  }
+
+  #coupons {
+    width: 100%;
+    background-color: var(--white);
+  }
+
+  #coupons h3 {
+    text-align: center;
+    margin: 20px;
+  }
+
+  #coupons p {
+    margin: 20px;
+    width: 300px;
+  }
+  #coupons div {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    padding: 20px;
+  }
+
+  #coupons section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    width: 90%;
+    gap: 10px;
+  }
+
+  #coupons section h4 {
+    width: 100%;
+  }
+
+  #coupons section p {
+    width: 100%;
+  }
+
+  #coupon-club form {
+    display: flex;
+    justify-content: center;
+  }
+
+  #coupon-club div {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+  }
+
+  #coupon-club input {
+    border: 2px solid var(--purple);
+    width: 100%;
+    padding: 10px;
+    max-width: 200px;
+  }
+
+  #coupon-club input[type="submit"] {
+    background-color: var(--purple);
+    color: var(--white);
+  }
+
+  #coupon-club input[type="select"] {
+    width: 50px;
+  }
+
+  #coupon-club section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    width: 90%;
+    gap: 10px;
+  }
+
+  #coupon-club section h4 {
+    width: 100%;
+  }
+
+  #coupon-club section p {
+    width: 100%;
+  }
+}
+
+/** END MEDIA QUERIES **/
